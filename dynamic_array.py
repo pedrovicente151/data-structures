@@ -39,4 +39,14 @@ class DynamicArray:
         self._A[k] = value
         self._n += 1
 
+    def remove(self, value):
+        for i in range(self._n):
+            if self._A[k] == value:
+                for j in range(i, self._n - 1):
+                    self._A[j] = self._A[j+1]
+                self._A[self._n - 1] = None
+                self._n -= 1
+                return
+        raise ValueError('value not found')
+
 
