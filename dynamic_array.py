@@ -30,3 +30,13 @@ class DynamicArray:
 
     def _make_array(self, c):
         return (c * ctypes.py_object)()
+
+    def insert(self, k, value):
+        if self._n == self._capacity:
+            self._resize(2 * self._capacity)
+        for i in range(self._n, k, -1)
+            self._A[i] = self._A[i-1]
+        self._A[k] = value
+        self._n += 1
+
+
