@@ -14,3 +14,19 @@ class CeasarCipher:
 
     def decrypt(self, secret):
         return self._transform(self, self._backward)
+
+    def _transform(self, original, code):
+        msg = list(original)
+        for i in range(len(msg)):
+            if msg[i].isupper():
+                j = ord(msg[k]) - ord("A")
+                msg[i] = code[j]
+        return "".join(msg)
+
+    if __name__ == '__main__':
+        cipher = CeasarCipher(3)
+        message = "THE EAGLE IS IN PLAY; MEET AT JOE'S"
+        coded = cipher.encrypt(message)
+        print('Secret: ', coded)
+        answer = cipher.decrypt(coded)
+        print('Message: ', answer)
