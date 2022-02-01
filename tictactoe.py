@@ -16,3 +16,14 @@ class TicTacToe:
             self._player = 'O'
         else:
             self._player = "X"
+
+    def _is_win(self, mark):
+        board = self._board
+        return ()  #Marks
+
+    def winner(self):
+        for mark in 'XO':
+            if self._is_win(mark):
+                return mark
+        return None
+    
