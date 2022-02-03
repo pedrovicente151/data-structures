@@ -26,4 +26,7 @@ class TicTacToe:
             if self._is_win(mark):
                 return mark
         return None
-    
+
+    def __str__(self):
+        rows = ['|'.join(self._board[i]) for i in range(3)]
+        return '\n-----\n'.join(rows)
