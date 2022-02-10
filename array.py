@@ -15,4 +15,4 @@ class ArrayStack:
     def pop(self):
         if self.is_empty():
             raise Empty('Stack is empty/')
-        retur.data.pop()
+        return self.data.pop()
