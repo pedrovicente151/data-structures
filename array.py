@@ -21,3 +21,13 @@ class ArrayStack:
         if self.is_empty():
             raise Empty('Stack is empty/')
         return self.data.pop()
+
+
+def reverse_file(filename):
+    S = ArrayStack()
+    original = open(filename)
+    for line in original:
+        S.push(line.strip('\n'))
+    original.close()
+
+    
