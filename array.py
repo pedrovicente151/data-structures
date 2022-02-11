@@ -30,4 +30,7 @@ def reverse_file(filename):
         S.push(line.strip('\n'))
     original.close()
 
-    
+    output = open(filename, 'w')
+    while not S.is_empty():
+        output.write(S.pop() + '\n')
+    output.close()
