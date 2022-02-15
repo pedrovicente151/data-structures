@@ -43,7 +43,7 @@ def is_matched(expr):
     for i in expr:
         if i in left:
             S.push(i)
-        elif c in right:
+        elif i in right:
             if S.is_empty():
                 return False
             if right.index(i) != left.index(S.pop()):
