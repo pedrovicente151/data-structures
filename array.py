@@ -22,6 +22,16 @@ class ArrayStack:
             raise Empty('Stack is empty/')
         return self.data.pop()
 
+    def see_top(self):
+        temp = self.data.pop()
+        temp1 = self.data.pop()
+
+        self.push(temp)
+        self.push(temp1)
+
+        return temp, temp1
+
+
 
 def reverse_file(filename):
     S = ArrayStack()
