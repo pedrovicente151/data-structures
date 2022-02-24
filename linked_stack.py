@@ -1,1 +1,6 @@
 class LinkedStack:
+
+
+class Node:
+
+    
